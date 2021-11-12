@@ -1,0 +1,52 @@
+.laptop{
+    height: 60vh;
+    background-color: rgb(19, 226, 19);
+    width: 60vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.casing{
+    border : 30px solid #050000dc;
+    border-radius: 10px;
+    height: 15vh;
+    width: 35vh;
+}
+
+.screen{
+    background-color: white;
+    height: calc(15vh - 1px);
+    width: calc(35vh - 1px);
+}
+
+.keyboard{
+    display: flex;
+    margin-top: 2px;
+    background-color: rgb(0, 0, 0);
+    height: 20vh;
+    width: 45vh;
+    border-radius: 4px;
+    border-inline: 10px solid white;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    flex-direction: column;
+    position: relative;
+}
+
+.button{
+
+    display: flex;
+    margin-left: 200px;
+    border-radius: 3px;
+    position: absolute;
+    height: 20px;
+    width: 50px;
+    bottom: 110px;
+
+}
+
