@@ -4,7 +4,7 @@ const Keyboard = (props)=> {
     return (
         <div className="keyboard" >
             <button className="button" style={{backgroundColor: `${props.buttonColor}`}}>
-            <Button/>  
+                <Button/>  
             </button>
            
                 <div>
