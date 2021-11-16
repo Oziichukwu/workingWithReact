@@ -39,7 +39,6 @@
 }
 
 .button{
-
     display: flex;
     margin-left: 200px;
     border-radius: 3px;
@@ -47,6 +46,8 @@
     height: 20px;
     width: 50px;
     bottom: 110px;
-
 }
+
+
+
 
