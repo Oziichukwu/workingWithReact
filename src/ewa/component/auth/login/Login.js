@@ -1,10 +1,14 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Input from '../../reusables/Input'
 import "./login.css"
 import img from "../../../../asserts/background_circle.svg"
 import image from "../../../../asserts/background_circle_bottom.svg"
 import Button from '../../reusables/Button'
-const Login=()=> {
+
+const Login=(props)=> {
+
+    let {setState} = props
+
 
     const inputField = [
         {label :"Email",  placeholder :"Enter your Email"},
@@ -18,10 +22,11 @@ const Login=()=> {
                 <div className="ewa_logo">
 
                 </div>
-                <button>
+                <button onClick={()=>setState("Register")}>
                     REGISTER
-                </button>
+                </button >
             </div >
+
             <img className="top_circle" src={img} alt="circlebackground"/>
             <div className="text_container">
 
