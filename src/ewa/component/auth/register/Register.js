@@ -9,11 +9,26 @@ const Register=(props)=> {
 
     let {setState} = props
 
+    let initialData = {
+        firstName : "" , lastName : "" , email:"", password :"" , confirmPassword : ""
+    }
+    
+
+    const [inputData, setInputData] = useState(initialData)
+
+    function handleInput(e){
+        let data = {
+            ...inputData, [e.target.name]: e.target.value
+        }
+        setInputData(data)
+    }
+
     const inputField = [
-        {label :"firstName",  placeholder :"Enter your FirstName"},
-        {label :"lastName",  placeholder :"Enter your LastName"},
-        {label :"Email",  placeholder :"Enter your Email"},
-        {label :"Password",  placeholder :"Enter your Password"},
+        {name: "firstName",label :"firstName",  placeholder :"Enter your FirstName"},
+        {name: "lastName", label :"lastName",  placeholder :"Enter your LastName"},
+        {name: "email", label :"Email",  placeholder :"Enter your Email"},
+        {name: "password", label :"Password",  placeholder :"Enter your Password"},
+        {name: "confirmPassword", label :"Confirm Password",  placeholder :"Confirm your Password"},
 ]
     return (
         <div className="register_container">
@@ -34,7 +49,8 @@ const Register=(props)=> {
                  for beans are satisfied</p>
             </div>
                 <div className="form_container">
-                {inputField.map((field,index)=><Input key={index} field={field}/>)}
+                {inputField.map((field,index)=>
+                    <Input onChange={handleInput} key={index} field={field}/>)}
                 </div>
                 <Button name="Register"/>
                 <img className="bottom_circle" src={image} alt="circlebackgroundbottom"/>
