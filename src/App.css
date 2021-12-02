@@ -1,5 +1,5 @@
 .container{
-  height: 100vh;
+  height: 110vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +34,7 @@
   padding: 20px 20px;
   border-radius: 4px;
   position: absolute;
-  bottom: 1rem;
+  bottom: 0.5rem;
   box-shadow: none;
   border: none;
   width: 88%;
