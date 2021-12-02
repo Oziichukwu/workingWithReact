@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Button=(props) =>{
-    let {name} = props
+    let {name, onClick} = props
     return (
-        <button className="auth_button">
+        <button onClick= {onClick} className="auth_button">
             {name}
         </button>
     )
