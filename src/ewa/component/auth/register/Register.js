@@ -23,6 +23,10 @@ const Register=(props)=> {
         setInputData(data)
     }
 
+    function registerUser(){
+        console.log(inputData)
+    }
+
     const inputField = [
         {name: "firstName",label :"firstName",  placeholder :"Enter your FirstName"},
         {name: "lastName", label :"lastName",  placeholder :"Enter your LastName"},
@@ -50,9 +54,9 @@ const Register=(props)=> {
             </div>
                 <div className="form_container">
                 {inputField.map((field,index)=>
-                    <Input onChange={handleInput} key={index} field={field}/>)}
+                    <Input value={inputData[field.name]} onChange={handleInput} key={index} field={field}/>)}
                 </div>
-                <Button name="Register"/>
+                <Button name="Register" onClick={registerUser}/>
                 <img className="bottom_circle" src={image} alt="circlebackgroundbottom"/>
             </div>
     )
