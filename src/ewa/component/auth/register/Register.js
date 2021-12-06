@@ -9,6 +9,8 @@ const Register=(props)=> {
 
     let {setState} = props
 
+    let url = "https://jsonplaceholder.typicode.com/posts"
+
     let initialData = {
         firstName : "" , lastName : "" , email:"", password :"" , confirmPassword : ""
     }
